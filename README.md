@@ -10,7 +10,7 @@ Creado por Enrique Favila Martínez el 1 de Agosto de 2021.
 
 Clona este repositorio ejecutando este comando en la consola de git:
 
-### `git clone https://github.com/EFavila97/StarWarsDemo.git`
+### `git clone https://github.com/EnriqueF97/StarWarsDemo.git`
 
 ## Scripts
 
