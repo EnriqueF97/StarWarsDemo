@@ -27,7 +27,9 @@ export default class Species extends Component {
         }}>
         <Col
           xs={12}
-          sm={6}
+          sm={12}
+          md={12}
+          lg={6}
           style={{
             background: "rgb(189, 189, 189)",
             borderRadius: "15px",
@@ -41,7 +43,7 @@ export default class Species extends Component {
           <h4>Longevidad: {info.average_lifespan}</h4>
           <h4>Lengua nativa: {info.language}</h4>
         </Col>
-        <Col xs={12} sm={6} style={{ padding: "0 0.5em" }}>
+        <Col xs={12} sm={12} md={12} lg={6} style={{ padding: "0 0.5em" }}>
           <Image
             style={{
               borderRadius: "15px",

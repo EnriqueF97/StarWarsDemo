@@ -31,6 +31,10 @@ Algunos estilos son provenientes de React-Bootstrap.
 
 El proyecto requiere de una conexión constante a internet.
 
+## Bugs identificados
+
+En la barra de navegación superior los enlaces no funcionan a menos de que sean seleccionados con doble-click.
+
 ## Aprende más de React
 
 Puedes leer más en la [documentación de Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
