@@ -12,6 +12,9 @@ Clona este repositorio ejecutando este comando en la consola de git:
 
 ### `git clone https://github.com/EnriqueF97/StarWarsDemo.git`
 
+## Pre-requisitos
+Node.js (14.x)
+
 ## Scripts
 
 En el directorio del proyecto, ejecuta:
