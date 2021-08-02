@@ -15,47 +15,21 @@ export default class App extends Component {
     people: {},
     planet: {},
     species: {},
-    product: {},
+    item: {},
   };
 
-  componentDidMount() {
-    //make api calls for everything and save them in state individually
-    try {
-      // axios.get(`https://swapi.dev/api/starships/?format=json`).then((res) => {
-      //   const starships = res.data.results;
-      //   console.log("ships", starships);
-      //   this.setState({ starships });
-      // });
-      // axios.get(`https://swapi.dev/api/people/?format=json`).then((res) => {
-      //   const people = res.data.results;
-      //   this.setState({ people });
-      // });
-      // axios.get(`https://swapi.dev/api/planets/?format=json`).then((res) => {
-      //   const planets = res.data.results;
-      //   this.setState({ planets });
-      // });
-      // axios.get(`https://swapi.dev/api/species/?format=json`).then((res) => {
-      //   const species = res.data.results;
-      //   this.setState({ species });
-      // });
-      //console.log("Initial fetch complete.", this.state.starships[0]);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  componentDidMount() {}
 
-  handleSectionSelect = (select) => {
-    console.log("App - handleSelection", select);
-    this.setState({ currentSection: select });
+  handleSectionSelect = (currentSection) => {
+    this.setState({ currentSection });
   };
 
   handleProductSelect = (item) => {
-    console.log("Selected item", item.name);
-    this.setState({ product: item });
+    this.setState({ item });
   };
 
   render() {
-    const { currentSection, product } = this.state;
+    const { currentSection, item } = this.state;
 
     return (
       <>
@@ -74,14 +48,10 @@ export default class App extends Component {
             <SectionList url={currentSection} onItemSelect={this.handleProductSelect} />
           </Col>
           <Col xs={12} sm={12} md={12} lg={9}>
-            {this.state.currentSection === "/planets" ? <Planet info={product} pic={product.name} /> : <></>}
-            {this.state.currentSection === "/starships" ? (
-              <Vehicle info={product} pic={product.name} />
-            ) : (
-              <></>
-            )}
-            {this.state.currentSection === "/people" ? <People info={product} pic={product.name} /> : <></>}
-            {this.state.currentSection === "/species" ? <Species info={product} pic={product.name} /> : <></>}
+            {this.state.currentSection === "/planets" ? <Planet info={item} pic={item.name} /> : <></>}
+            {this.state.currentSection === "/starships" ? <Vehicle info={item} pic={item.name} /> : <></>}
+            {this.state.currentSection === "/people" ? <People info={item} pic={item.name} /> : <></>}
+            {this.state.currentSection === "/species" ? <Species info={item} pic={item.name} /> : <></>}
           </Col>
         </Row>
         <BottomNav />

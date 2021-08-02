@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Nav } from "react-bootstrap";
 import axios from "axios";
+import ListItem from "./ListItem";
 
 export default class SectionList extends Component {
   state = {
@@ -27,26 +28,26 @@ export default class SectionList extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.url !== this.state.url) {
-      console.log("Detected url change");
       try {
+        console.log("fetching data...");
         this.setState({ url: this.props.url });
         axios.get(`https://swapi.dev/api${this.props.url}/?format=json`).then((res) => {
           const data = res.data.results;
-          console.log("componentUpdate - SectionList", data);
           this.setState({ data });
           this.props.onItemSelect(data[0]);
         });
+
+        console.log("data fetched!");
       } catch (error) {
         console.error(error);
       }
     }
   }
 
-  getItemData = (myObject) => {
-    for (var key in myObject) {
-      return myObject[key];
-    }
+  handleProductSelect = (item) => {
+    this.props.onItemSelect(item);
   };
+
   render() {
     return (
       <div
@@ -58,12 +59,7 @@ export default class SectionList extends Component {
         }}>
         <Nav defaultActiveKey='/home' className='flex-column'>
           {this.state.data.map((item) => (
-            <Nav.Link
-              style={{ textAlign: "center", lineHeight: "3vh", fontSize: "1.3em", color: "lightGray" }}
-              key={item.url}
-              onClick={() => this.props.onItemSelect(item)}>
-              {item.name}
-            </Nav.Link>
+            <ListItem key={item.url} item={item} onItemSelect={(item) => this.handleProductSelect(item)} />
           ))}
         </Nav>
       </div>
