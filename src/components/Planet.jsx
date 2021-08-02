@@ -23,7 +23,8 @@ export default class Planet extends Component {
           color: "black",
           borderRadius: "15px",
           width: "100%",
-          padding: "1em",
+          padding: "0.5em 1em",
+          margin: 0,
         }}>
         <Col
           xs={12}
@@ -35,6 +36,7 @@ export default class Planet extends Component {
             borderRadius: "15px",
             padding: "1em 1em",
             textAlign: "center",
+            margin: "0.5em 0",
           }}>
           <h1 style={{ margin: "1em 0" }}>{info.name}</h1>
           <h4>Población: {info.population} habitantes</h4>
@@ -43,7 +45,7 @@ export default class Planet extends Component {
           <h4>Tipo de superficie: {info.terrain}</h4>
           <h4>Diámetro planetario: {info.diameter} kilómetros</h4>
         </Col>
-        <Col xs={12} sm={12} md={12} lg={6} style={{ padding: "0 0.5em" }}>
+        <Col xs={12} sm={12} md={12} lg={6} style={{ padding: "0 0.5em", margin: "0.5em 0" }}>
           <Image
             style={{
               borderRadius: "15px",
