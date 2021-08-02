@@ -59,11 +59,7 @@ export default class SectionList extends Component {
         <Nav defaultActiveKey='/home' className='flex-column'>
           {this.state.data.map((item) => (
             <Nav.Link
-              style={{
-                lineHeight: "4vh",
-                fontSize: "1.3em",
-                color: "lightGray",
-              }}
+              style={{ textAlign: "center", lineHeight: "3vh", fontSize: "1.3em", color: "lightGray" }}
               key={item.url}
               onClick={() => this.props.onItemSelect(item)}>
               {item.name}

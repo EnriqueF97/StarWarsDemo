@@ -23,16 +23,20 @@ export default class Species extends Component {
           color: "black",
           borderRadius: "15px",
           width: "100%",
-          padding: "1em",
+          padding: "0.5em 1em",
+          margin: 0,
         }}>
         <Col
           xs={12}
-          sm={6}
+          sm={12}
+          md={12}
+          lg={6}
           style={{
             background: "rgb(189, 189, 189)",
             borderRadius: "15px",
             padding: "1em 1em",
             textAlign: "center",
+            margin: "0.5em 0",
           }}>
           <h1 style={{ margin: "1em 0" }}>{info.name}</h1>
           <h4>Clasificación: {info.classification}</h4>
@@ -41,7 +45,7 @@ export default class Species extends Component {
           <h4>Longevidad: {info.average_lifespan}</h4>
           <h4>Lengua nativa: {info.language}</h4>
         </Col>
-        <Col xs={12} sm={6} style={{ padding: "0 0.5em" }}>
+        <Col xs={12} sm={12} md={12} lg={6} style={{ padding: "0 0.5em", margin: "0.5em 0" }}>
           <Image
             style={{
               borderRadius: "15px",

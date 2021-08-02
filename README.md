@@ -1,4 +1,10 @@
-Este proyecto fue creado con el comando [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+
+Un proyecto con React.js con diseño responsivo minimalista, donde se muestran algunos personajes y entidades del universo de Star Wars con ayuda de la API SWAPI. Este proyecto fue creado con el comando [Create React App](https://github.com/facebook/create-react-app).
+
+## Contribuidor
+
+Creado por Enrique Favila Martínez el 1 de Agosto de 2021.
 
 ## Obtén este repositorio
 
@@ -31,10 +37,12 @@ Algunos estilos son provenientes de React-Bootstrap.
 
 El proyecto requiere de una conexión constante a internet.
 
+## Bugs identificados
+
+En el repositorio de GitHub se detallan algunos bugs identificados.
+
 ## Aprende más de React
 
 Puedes leer más en la [documentación de Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-## Enrique Favila Martínez, 01/08/2021
+To learn React, check out the [Documentación de React](https://reactjs.org/).

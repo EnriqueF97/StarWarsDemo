@@ -13,7 +13,7 @@ export default class NavigationBar extends Component {
 
   render() {
     return (
-      <Navbar bg='dark' variant='dark'>
+      <Navbar bg='dark' variant='dark' style={{ width: "100vw" }}>
         <Container>
           <Nav className='me-auto'>
             <Navbar.Brand>
@@ -24,7 +24,6 @@ export default class NavigationBar extends Component {
                 style={{ fontSize: "1.5em" }}
                 key={section.key}
                 onClick={() => this.props.onSelect(section.url)}>
-                {"| "}
                 {section.name}
               </Nav.Link>
             ))}

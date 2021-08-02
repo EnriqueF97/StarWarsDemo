@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import NavigationBar from "./components/NavigationBar";
-import CounterList from "./components/CounterList";
-import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useHistory, useLocation } from "react-router-dom";
-import Home from "./components/Home";
 import { Row, Col } from "react-bootstrap";
-import SectionList from "./SectionList";
-import DisplayItem from "./components/DisplayItem";
-import axios from "axios";
+import SectionList from "./components/SectionList";
 import Vehicle from "./components/Starship";
 import Species from "./components/Species";
 import Planet from "./components/Planet";
 import People from "./components/People";
+import BottomNav from "./components/BottomNav";
 
 export default class App extends Component {
   state = {
@@ -65,38 +60,31 @@ export default class App extends Component {
     return (
       <>
         <NavigationBar onSelect={this.handleSectionSelect} />
-        <div
+
+        <Row
           style={{
             background: "rgb(28, 28, 28)",
-            width: "100vw",
-            height: "90vh",
+            minWidth: "100vw",
+            minHeight: "80vh",
             padding: "5vh 20vw",
             color: "rgb(227, 227, 227)",
+            margin: 0,
           }}>
-          <Row>
-            <Col xs={12} sm={3}>
-              <SectionList url={currentSection} onItemSelect={this.handleProductSelect} />
-            </Col>
-            <Col xs={12} sm={9}>
-              {this.state.currentSection === "/planets" ? (
-                <Planet info={product} pic={product.name} />
-              ) : (
-                <></>
-              )}
-              {this.state.currentSection === "/starships" ? (
-                <Vehicle info={product} pic={product.name} />
-              ) : (
-                <></>
-              )}
-              {this.state.currentSection === "/people" ? <People info={product} pic={product.name} /> : <></>}
-              {this.state.currentSection === "/species" ? (
-                <Species info={product} pic={product.name} />
-              ) : (
-                <></>
-              )}
-            </Col>
-          </Row>
-        </div>
+          <Col xs={12} sm={12} md={12} lg={3}>
+            <SectionList url={currentSection} onItemSelect={this.handleProductSelect} />
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={9}>
+            {this.state.currentSection === "/planets" ? <Planet info={product} pic={product.name} /> : <></>}
+            {this.state.currentSection === "/starships" ? (
+              <Vehicle info={product} pic={product.name} />
+            ) : (
+              <></>
+            )}
+            {this.state.currentSection === "/people" ? <People info={product} pic={product.name} /> : <></>}
+            {this.state.currentSection === "/species" ? <Species info={product} pic={product.name} /> : <></>}
+          </Col>
+        </Row>
+        <BottomNav />
       </>
     );
   }
