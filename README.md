@@ -13,6 +13,7 @@ Clona este repositorio ejecutando este comando en la consola de git:
 ### `git clone https://github.com/EnriqueF97/StarWarsDemo.git`
 
 ## Pre-requisitos
+
 Node.js (14.x)
 
 ## Scripts
@@ -21,12 +22,21 @@ En el directorio del proyecto, ejecuta:
 
 ### `npm install`
 
-Instalará las dependencias necesarias para la ejecución del proyecto. ATENCIÓN: De no hacer este paso el proyecto no se ejecutará correctamente.
+Instalará las dependencias necesarias para la ejecución del proyecto. \ATENCIÓN: De no hacer este paso el proyecto no se ejecutará correctamente.
 
 ### `npm start`
 
 Ejecutará la aplicación en modo de desarrollo.\
 Abre [http://localhost:3000](http://localhost:3000) para visualizar en el navegador.
+
+### `npm run build`
+
+Creará una version de produccion del proyecto optimizada.
+
+### `serve -s build`
+
+Ejecutará la aplicación en modo de producción.\
+Abre [http://localhost:5000](http://localhost:5000) para visualizar en el navegador.
 
 ## APIs
 

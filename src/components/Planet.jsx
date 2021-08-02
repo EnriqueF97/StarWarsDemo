@@ -2,18 +2,13 @@ import React, { Component } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 
 export default class Planet extends Component {
-  state = {};
+  state = { name: "" };
 
   constructor(props) {
     super(props);
-    this.state = this.props.planetInfo;
+    this.state = this.props.info;
   }
 
-  componentDidMount() {
-    console.log("State mounted", this.state);
-  }
-
-  componentDidUpdate() {}
   render() {
     const { info } = this.props;
     return (
